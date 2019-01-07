@@ -10,7 +10,7 @@ package javaproject.Panels;
  * @author Leslie_Rathnamalala
  */
 public class VacantRoom extends javax.swing.JPanel {
-
+//
     /**
      * Creates new form VacantRoom
      */
