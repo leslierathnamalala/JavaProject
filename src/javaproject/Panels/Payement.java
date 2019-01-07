@@ -157,7 +157,12 @@ public class Payement extends javax.swing.JPanel {
 
     private Connection connect() {
         // SQLite connection string
+<<<<<<< HEAD
         String url = "jdbc:sqlite:src/JavaProjectDB.db";
+=======
+        String url;
+        url = "jdbc:sqlite:src/JavaProjectDB.db";
+>>>>>>> 5f0527713df4130385e71b817fc3b85011127ac0
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
@@ -169,45 +174,38 @@ public class Payement extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-         connect();
-        
+        connect();
+
         String sql = "INSERT INTO MonthlyPayment(Date,NIC,CurrentMonth,Amount,Overdue,PaymentType) VALUES(?,?,?,?,?,?)";
- 
-         
-        
-        
+
         try (Connection conn = this.connect();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            
-            
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
             pstmt.setString(1,Date.getText());
             pstmt.setInt(2,Integer.parseInt(NIC.getText()));
             pstmt.setString(3,currentmon.getText());
             pstmt.setInt(4,Integer.parseInt(amount.getText()));
-            pstmt.setInt(5,Integer.parseInt(overdue.getText())); 
+            pstmt.setInt(5,Integer.parseInt(overdue.getText()));
             pstmt.setString(6,payment.getText());
-           
-            
-          
-            
+
             pstmt.execute();
         } catch (SQLException e) {
-             
-             JOptionPane.showMessageDialog(null,e);
-             
+
+            JOptionPane.showMessageDialog(null,e);
+
         }
         JOptionPane.showMessageDialog(null,"Data Succefully Enterd");
-        
+
         Date.setText("");
         NIC.setText("");
         currentmon.setText("");
-        amount.setText("");       
+        amount.setText("");
         overdue.setText("");
         payment.setText("");
-       
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Date;
