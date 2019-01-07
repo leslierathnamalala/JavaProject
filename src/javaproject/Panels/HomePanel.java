@@ -5,6 +5,8 @@
  */
 package javaproject.Panels;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Leslie_Rathnamalala
@@ -34,6 +36,11 @@ public class HomePanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(748, 493));
 
         jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -57,6 +64,13 @@ public class HomePanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here
+        
+        
+        JOptionPane.showMessageDialog(null,"Searching");
+    }//GEN-LAST:event_jButton1ActionPerformed
+//sample comment
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
