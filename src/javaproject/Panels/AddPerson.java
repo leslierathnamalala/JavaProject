@@ -15,7 +15,7 @@ import javax.imageio.ImageIO;
 
 
 /**
- *
+ *this is the Add person panel
  * @author Leslie_Rathnamalala
  */
 public class AddPerson extends javax.swing.JPanel {
@@ -30,7 +30,7 @@ public class AddPerson extends javax.swing.JPanel {
 
     private Connection connect() {
         // SQLite connection string
-        String url = "jdbc:sqlite:C:\\Users\\Leslie Rathnamalala\\Documents\\NetBeansProjects\\JavaProject\\src\\JavaProjectDB.db";
+        String url = "jdbc:sqlite:src/JavaProjectDB.db";
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
