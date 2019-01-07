@@ -14,8 +14,15 @@ public class Report extends javax.swing.JPanel {
     /**
      * Creates new form Report
      */
+    
+    DatabaseConnect objconn = new DatabaseConnect();
+    
+    
+    
+    
     public Report() {
         initComponents();
+        
     }
 
     /**
