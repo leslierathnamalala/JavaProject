@@ -157,8 +157,12 @@ public class Payement extends javax.swing.JPanel {
 
     private Connection connect() {
         // SQLite connection string
+<<<<<<< HEAD
+        String url = "jdbc:sqlite:src/JavaProjectDB.db";
+=======
         String url;
         url = "jdbc:sqlite:src/JavaProjectDB.db";
+>>>>>>> 5f0527713df4130385e71b817fc3b85011127ac0
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
